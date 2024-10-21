@@ -1,0 +1,150 @@
+/* add desktop styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Tahoma, sans-serif;
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow: auto;
+}
+
+.hero-section img {
+  width: 106%;
+  height: auto;
+  object-fit: cover;
+}
+
+.hero-section h1 {
+  color: #fff;
+  position: absolute; /*From this line to the next 3 lines is another way for concept -  "center a div"*/
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  text-align: center;
+  font-weight: 800;
+  font-size: 6rem;
+}
+
+.hero-section h1 span {
+  font-weight: 400;
+  font-size: 2rem;
+  display: block;
+}
+
+.hero-section i {
+  font-color: #fff;
+  font-size: 5rem;
+}
+
+.intro {
+  margin-top: 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow: auto;
+}
+
+.intro img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.intro .intro-wrap {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.intro .left h2 {
+  padding-right: 10%;
+  font-weight: 600;
+  color: #fff;
+  font-size: 2rem;
+  width: 450px;
+}
+
+.intro .right {
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+  color: #fff;
+  font-size: 1rem;
+  width: 700px;
+}
+
+.cta-btn {
+  width: 100px;
+  height: 35px;
+  margin-top: 10px;
+}
+
+/* styling activities section */
+
+.activities {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  margin-top: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.activities .background-img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.activities h2 {
+  position: relative;
+  bottom: 900px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 4rem;
+  color: #fff;
+}
+
+.activities .activ-wrapper {
+  position: relative;
+  display: flex;
+  bottom: 700px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.activities .activ-wrapper .container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  width: 400px;
+  height: 350px;
+}
+
+.activities .activ-wrapper .container img {
+  max-width: 300px;
+  min-height: 350px;
+}
+.activities .activ-wrapper .container h3 {
+  position: absolute;
+  top: 300px;
+  width: 300px;
+  color: #fff;
+}
+
+.activities .activ-wrapper .container i {
+}
