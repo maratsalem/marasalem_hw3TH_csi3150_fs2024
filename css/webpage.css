@@ -1,203 +1,222 @@
-/* add desktop styling */
+/*reset browser*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .header {
   width: 100vw;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-.header img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-.header h1 {
-  color: #fff;
-  position: absolute; /*From this line to the next 3 lines is another way for concept -  "center a div"*/
-  top: 75%;
-  left: 50%;
-  transform: translate(-50%, -100%);
+  height: 100vh;
   text-align: center;
-  font-weight: 800;
-  font-size: 6rem;
-}
-
-.header h1 span {
-  font-weight: 400;
-  font-size: 2rem;
-  display: block;
-}
-
-.header i {
-  font-color: #fff;
-  font-size: 5rem;
-  position: relative;
-  top: 15px;
-}
-
-.intro {
-  width: 100vw;
-  min-height: 100vh;
-  margin-top: 0px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly;
-  overflow: auto;
-}
-
-.intro img {
-  position: absolute;
-  width: 100vw;
-  max-height: 100vh;
-  object-fit: cover;
-}
-
-.intro .intro-wrap {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-.intro .intro-wrap .left h2 {
-  padding-right: 10%;
-  font-weight: 600;
-  color: #fff;
-  font-size: 2rem;
-  width: 450px;
-}
-
-.intro .intro-wrap .right {
-  display: flex;
-  flex-direction: column;
-  font-weight: 400;
-  color: #fff;
-  font-size: 1rem;
-  width: 700px;
-}
-
-.intro .intro-wrap .right .intro-desc {
-  padding-top: 15px;
-}
-
-.intro .cta-btn {
-  width: 125px;
-  height: 35px;
-  margin-top: 10px;
-  background-color: bisque;
-  border: none;
-}
-
-/* styling activities section */
-
-.activities {
-  width: 100vw;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.activities .background-img {
-  position: relative;
-  width: 100%;
-  max-height: 750px;
+.header img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
   object-fit: cover;
+  z-index: 1;
+}
+
+.header h1 {
+  padding-top: 120px;
+  color: #fff;
+  font-size: 4rem;
+  text-align: center;
+  z-index: 2;
+}
+
+.header h2 {
+  padding-top: 30px;
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
+  z-index: 2;
+}
+
+.header i {
+  padding-top: 30px;
+  font-size: 4rem;
+  z-index: 5;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #fff;
+}
+
+.header i:hover {
+  color: black;
+}
+
+/*section 2 question*/
+.intro {
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.intro img {
+  position: absolute;
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+
+.intro .intro-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  z-index: 2;
+}
+
+.intro .intro-wrap .left h2 {
+  font-size: 3rem;
+  width: 800px;
+  color: #fff;
+  z-index: 2;
+  padding: 150px;
+}
+
+.intro .intro-wrap .right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro .intro-wrap .right .intro-desc {
+  padding-top: 50px;
+}
+
+.intro .intro-wrap .right p {
+  font-size: 1rem;
+  width: 575px;
+  height: 250px;
+  color: #fff;
+  z-index: 2;
+  text-align: left;
+}
+
+.intro .read-btn {
+  background-color: #000;
+  color: white;
+  border: none;
+  width: 125px;
+  height: 40px;
+  font-size: 1rem;
+  z-index: 2;
+  position: relative;
+  right: 225px;
+  top: -75px;
+}
+/*section 2 ends*/
+
+.activities {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.activities img {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  object-fit: cover;
+  z-index: 1;
 }
 
 .activities h2 {
-  position: relative;
-  top: -700px;
-  text-align: center;
-  font-weight: 600;
-  font-size: 4rem;
+  font-size: 3rem;
   color: #fff;
+  z-index: 2;
+  margin-top: 60px;
 }
 
 .activities .activ-wrapper {
-  position: relative;
   display: flex;
-  top: -600px;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  z-index: 2;
 }
 
 .activities .activ-wrapper .container {
-  position: relative;
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+  align-items: first baseline;
+  justify-content: space-around;
   flex-direction: column;
-  width: 400px;
-  height: 350px;
+  padding: 50px;
 }
 
 .activities .activ-wrapper .container img {
-  max-width: 350px;
-  min-height: 400px;
+  max-width: 300px;
+  min-height: 350px;
+  max-height: 350px;
+  z-index: 2;
 }
+
 .activities .activ-wrapper .container h3 {
-  position: absolute;
-  right: 5px;
-  top: 300px;
-  width: 350px;
-  font-size: 18px;
-  color: #fff;
+  padding-top: 275px;
+  z-index: 3;
+  width: 300px;
+  font-size: 1.15rem;
+  color: #000;
 }
 
 .activities .activ-wrapper .container i {
-  position: absolute;
-  color: #fff;
-  top: 325px;
-  left: 50px;
+  z-index: 4;
+  color: #000;
   font-size: 50px;
 }
 
-.activities .cta-btn {
-  position: relative;
-  bottom: 525px;
-  width: 125px;
-  height: 35px;
-  background-color: bisque;
+.activities .read-btn {
+  background-color: #000;
+  color: white;
   border: none;
+  width: 125px;
+  height: 40px;
+  font-size: 1rem;
+  z-index: 2;
 }
 
+/*section 3 ends*/
 .recs {
-  position: absolute;
   width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
+  text-align: center;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .recs img {
   position: absolute;
-  width: 100vw;
-  max-height: 800px;
   object-fit: cover;
-  margin-top: -850px;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
 }
 
 .recs .content-wrapper {
-  position: absolute;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  bottom: 500px;
+  justify-content: space-evenly;
+  z-index: 2;
 }
 
 .recs .content-wrapper h2 {
@@ -205,8 +224,6 @@
   color: #f00;
   font-size: 3.5rem;
   width: 400px;
-  margin-right: 50px;
-  margin-bottom: 200px;
 }
 
 .recs .content-wrapper .content {
@@ -227,22 +244,20 @@
 }
 
 .stats {
-  position: absolute;
   width: 100vw;
-  min-height: 450px;
-  max-height: 450px;
-  margin-top: 300px;
-  background-color: lightblue;
+  height: 100vh;
+  text-align: center;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  overflow: hidden;
 }
 
 .stats img {
   position: absolute;
-  width: 100vw;
-  max-height: 450px;
   object-fit: cover;
+  width: 100vw;
+  height: 100vh;
   z-index: 1;
 }
 
@@ -254,34 +269,34 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   z-index: 2;
 }
 
 .testimonial {
-  position: relative;
   width: 100vw;
-  max-height: 550px;
-  color: #fff;
-  top: 595px;
-  margin-top: 150px;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .testimonial img {
   position: absolute;
-  width: 100vw;
-  max-height: 550px;
   object-fit: cover;
+  width: 100vw;
+  height: 100vh;
   z-index: 1;
 }
 
 .testimonial .test-content {
-  position: relative;
-  top: 75px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  z-index: 2;
 }
 
 .testimonial .test-content .person {
@@ -289,36 +304,36 @@
   height: 200px;
   border-radius: 65%;
   z-index: 2;
+  position: relative;
 }
 
 .testimonial .test-content p {
-  padding-top: 25px;
+  padding-top: 50px;
   width: 700px;
   z-index: 2;
-  position: relative;
-  top: 225px;
 }
 
 .testimonial .test-content h3 {
   width: 700px;
   text-align: center;
   z-index: 2;
-  position: relative;
-  top: 240px;
+  padding-top: 15px;
 }
 
 .testimonial .test-content i {
   font-size: 5rem;
   z-index: 2;
-  position: relative;
-  top: 250px;
+  padding-top: 50px;
 }
 
 .gallery {
   width: 100vw;
-  height: 100vh;
-  position: absolute;
-  margin-top: 911px;
+  height: 384px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .gallery img {
@@ -329,10 +344,10 @@
 }
 
 .gallery .wrap-left {
+  position: absolute;
+  right: 1470px;
   font-size: 4rem;
   z-index: 2;
-  position: absolute;
-  top: 200px;
 }
 
 .gallery .wrap-right {
@@ -340,58 +355,80 @@
   z-index: 2;
   position: absolute;
   left: 1470px;
-  top: 200px;
 }
 
 .footer {
-  width: 100vw;
-  max-height: 800px;
+  width: 100%;
+  height: 600px;
+  text-align: center;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  overflow: hidden;
+}
+.footer img {
   position: absolute;
-  margin-top: 50px;
+  object-fit: cover;
+  width: 100vw;
+  max-height: 600px;
+  z-index: 1;
 }
 
-.footer img {
-  width: 100%;
-  height: 600px;
-  object-fit: cover;
-  position: relative;
+.footer .left {
+  display: flex;
+  flex-direction: column;
+  align-items: first baseline;
+  justify-content: space-evenly;
+  z-index: 2;
 }
 
 .footer .left h2 {
-  padding-right: 10%;
-  font-weight: 600;
-  color: #fff;
-  font-size: 2rem;
-  width: 450px;
+  font-size: 4rem;
 }
-/* <footer>
-      <div class="left">
-        <h2>Contact Us</h2>
-        <ul>
-          <li>Toll Free:</li>
-          <li>Salem:</li>
-          <li>Fax:</li>
-          <li>Email: info@Salem.com</li>
-        </ul>
-        <div class="icon-wrapper">
-          <i class="bx bxl-facebook-circle"></i>
-          <i class="bx bxl-twitter"></i>
-          <i class="bx bxl-instagram"></i>
-          <i class="bx bxl-pinterest"></i>
-          <i class="bx bxl-linkedin"></i>
-        </div>
-      </div>
-      <div class="right">
-        <input type="text" class="text" />
-        <input type="email" name="" id="" />
-        <!-- textAREA -->
-        <input type="text" name="" id="" />
-        <button class="submit">submit</button>
-      </div>
-    </footer>
-  </body>
-</html>
- */
+
+.footer .left ul {
+  padding-top: 20px;
+  list-style-type: none;
+  font-size: 1.25rem;
+  text-align: left;
+}
+
+.footer .left .icon-wrapper {
+  padding-top: 20px;
+  font-size: 2.45rem;
+  color: #fff;
+}
+
+.footer .right {
+  display: flex;
+  flex-direction: column;
+  align-items: first baseline;
+  justify-content: space-evenly;
+  z-index: 2;
+}
+
+.footer .right .text,
+.email,
+.message {
+  width: 400px;
+  height: 40px;
+  margin-top: 20px;
+  background-color: transparent;
+  color: #000;
+  border-color: #fff;
+}
+
+.footer .right .message {
+  height: 100px;
+}
+
+.footer .right .submit {
+  background-color: #000;
+  color: white;
+  border: none;
+  width: 125px;
+  height: 40px;
+  font-size: 1rem;
+  margin-top: 20px;
+  z-index: 2;
+}
