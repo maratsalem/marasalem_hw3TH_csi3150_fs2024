@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  --primary-accent-color: rgb(197, 108, 36);
 }
 
 .header {
@@ -35,7 +36,7 @@
 }
 
 .header h2 {
-  padding-top: 30px;
+  padding-top: 20px;
   color: #fff;
   font-size: 1.5rem;
   text-align: center;
@@ -43,15 +44,16 @@
 }
 
 .header i {
-  padding-top: 30px;
+  padding-top: 50px;
   font-size: 4rem;
-  z-index: 5;
+  z-index: 2;
   color: #fff;
   transition: transform 0.3s ease;
 }
 
 .header i:hover {
-  color: rgb(197, 108, 36);
+  color: var(--primary-accent-color);
+  cursor: pointer;
 }
 
 /*section 2 question*/
@@ -116,11 +118,13 @@
   height: 40px;
   font-size: 1rem;
   z-index: 2;
-  position: relative;
-  right: 225px;
-  top: -75px;
+  transition: all 0.3s ease;
 }
-/*section 2 ends*/
+
+.intro .read-btn:hover {
+  color: var(--primary-accent-color);
+  cursor: pointer;
+}
 
 .activities {
   width: 100vw;
@@ -142,7 +146,7 @@
 
 .activities h2 {
   font-size: 3rem;
-  color: #fff;
+  color: #000;
   z-index: 2;
   margin-top: 60px;
 }
@@ -170,22 +174,26 @@
 }
 
 .activities .activ-wrapper .container h3 {
-  padding-top: 275px;
+  margin-top: 275px;
   z-index: 3;
   width: 300px;
+  height: 50px;
   font-size: 1.15rem;
-  color: #000;
+  color: #ffffff;
+  padding-left: 10px;
 }
 
 .activities .activ-wrapper .container i {
   z-index: 4;
-  color: #000;
+  color: #fff;
   font-size: 50px;
   transition: transform 0.3s ease;
+  margin-top: -35px;
 }
 
 .activities .activ-wrapper .container i:hover {
-  color: rgb(197, 108, 36);
+  color: var(--primary-accent-color);
+  cursor: pointer;
 }
 
 .activities .read-btn {
@@ -196,9 +204,14 @@
   height: 40px;
   font-size: 1rem;
   z-index: 2;
+  transition: all 0.3s ease;
 }
 
-/*section 3 ends*/
+.activities .read-btn:hover {
+  color: var(--primary-accent-color);
+  cursor: pointer;
+}
+
 .recs {
   width: 100vw;
   height: 100vh;
@@ -226,7 +239,7 @@
 
 .recs .content-wrapper h2 {
   font-weight: 600;
-  color: #f00;
+  color: rgb(255, 255, 255);
   font-size: 3.5rem;
   width: 400px;
 }
@@ -267,15 +280,25 @@
 }
 
 .stats .wrapper {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   border-radius: 65%;
-  background-color: rgba(217, 223, 224, 0.89);
+  background-color: var(--primary-accent-color);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
   z-index: 2;
+  text-align: center;
+}
+
+.stats .wrapper h3 {
+  font-size: 50px;
+}
+
+.stats .wrapper p {
+  font-size: 15px;
+  margin-top: -50px;
 }
 
 .testimonial {
@@ -313,9 +336,11 @@
 }
 
 .testimonial .test-content p {
-  padding-top: 50px;
+  margin-top: 50px;
   width: 700px;
   z-index: 2;
+  background-color: rgba(217, 223, 224, 0.75);
+  border-radius: 25;
 }
 
 .testimonial .test-content h3 {
@@ -323,6 +348,8 @@
   text-align: center;
   z-index: 2;
   padding-top: 15px;
+  background-color: rgba(217, 223, 224, 0.75);
+  border-radius: 25;
 }
 
 .testimonial .test-content i {
@@ -333,7 +360,8 @@
 }
 
 .testimonial .test-content i:hover {
-  color: rgb(197, 108, 36);
+  color: var(--primary-accent-color);
+  cursor: pointer;
 }
 
 .gallery {
@@ -358,6 +386,12 @@
   right: 1470px;
   font-size: 4rem;
   z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.gallery .wrap-left i:hover {
+  color: var(--primary-accent-color);
+  cursor: pointer;
 }
 
 .gallery .wrap-right {
@@ -365,6 +399,12 @@
   z-index: 2;
   position: absolute;
   left: 1470px;
+  transition: all 0.3s ease;
+}
+
+.gallery .wrap-right i:hover {
+  color: var(--primary-accent-color);
+  cursor: pointer;
 }
 
 .footer {
@@ -414,7 +454,8 @@
 /* should realistically maybe make a .icon-wrapper .i 
 with the transition isntead of in the wrapper(?) */
 .footer .left .icon-wrapper i:hover {
-  color: rgb(197, 108, 36);
+  color: var(--primary-accent-color);
+  cursor: pointer;
 }
 
 .footer .right {
@@ -440,7 +481,7 @@ with the transition isntead of in the wrapper(?) */
 .footer .right .text:hover,
 .email:hover,
 .message:hover {
-  color: rgb(197, 108, 36);
+  color: var(--primary-accent-color);
   cursor: pointer;
 }
 
@@ -457,4 +498,10 @@ with the transition isntead of in the wrapper(?) */
   font-size: 1rem;
   margin-top: 20px;
   z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.footer .right .submit:hover {
+  color: var(--primary-accent-color);
+  cursor: pointer;
 }
